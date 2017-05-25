@@ -1,0 +1,1221 @@
+@charset "UTF-8";
+/**
+ * 
+ * name public.style
+ * 
+ **/
+
+
+/*************************************************************************     reset style     ***********************************************************************************/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after, :before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'FZLTZH';
+    src: url('/fonts/方正兰亭准黑_GBK.ttf');
+}
+
+/*@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url(../../fonts/glyphicons-halflings-regular.eot);
+    src: url(../../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(../../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg');
+}*/
+/*-webkit-text-size-adjust--调整浏览器的自动调整字体大小;none/100%关闭调整功能*/
+html {
+    width: 100%;
+    height: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*设置元素中的字体的抗锯齿树形，antialiased--字体平滑清晰；subpixel-antialiased--默认值；none--属性无*/
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 12px;
+    font-family: "Microsoft YaHei","黑体",Helvetica,Arial,Tahoma,sans-serif;
+    color: #222;
+    line-height: 1.42857143;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, fieldset, textarea, figure {
+    margin: 0;
+}
+
+input, textarea, button, a {
+    outline: 0;
+    border: 0;
+}
+
+fieldset, legend, textarea, input {
+    padding: 0;
+    max-width: 100%;
+}
+
+ul, ol {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+/*移除以下元素的默认的描边样式*/
+a img, fieldset {
+    border: 0;
+}
+
+/*强制设置以下元素为块元素*/
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+/*强制设置audio,canvas,video为内联的块元素*/
+audio, canvas, video {
+    display: inline-block;
+}
+
+    audio:not([controls]) {
+        display: none;
+        height: 0;
+    }
+
+[hidden] {
+    display: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.42857143;
+    margin: 0;
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+/*设置button、select的文本烦人大小写模式标准文本；capitalize--每个单词的第一个字母大写；uppercase--每个字母都是大写;lowercase--定义只有小写字母;inherit--从父元素继承text-transform:属性的值*/
+button, select {
+    text-transform: none;
+}
+
+/*设置按钮的鼠标模式为pointer-手型*/
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+    /*设置不可点击的按钮以及input框的鼠标模式为默认的default*/
+    button[disabled], html input[disabled] {
+        cursor: default;
+    }
+
+/*设置单选/复选框的盒模型为border-box，移除默认的padding值为，设置为0*/
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/*定义input搜索框的盒模式为内容区域模式；并渲染input的显示方式为文本域模式*/
+input[type="search"] {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -webkit-appearance: textfield;
+}
+
+
+    /*去掉webkit自带的搜索input框的样式*/
+    input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+
+
+/*解决火狐按钮文字垂直居中的问题*/
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+/*resize:none；关闭文本域右下角的调整文本域大小的功能*/
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: none;
+}
+
+
+    /*chrome浏览器下，记录后的表单的input textarea select会带有淡黄色的背景，此css可以遮盖住此黄色背景*/
+    input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+        box-shadow: inset 0 0 0 1000px #fff;
+        -moz-box-shadow: inset 0 0 0 1000px #fff;
+        -webkit-box-shadow: inset 0 0 0 1000px #fff;
+    }
+
+select {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+    select:after {
+        content: "\e252";
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+
+/*webkit内核浏览器的滚动条设置*/
+/*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}*/
+
+/*滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）*/
+/*::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #c3c3c3;
+}*/
+
+/*滚动条的轨道（里面装有Thumb）*/
+/*::-webkit-scrollbar-track {
+    background-color: transparent;
+}*/
+
+a {
+    color: #3292ff;
+    text-decoration: none;
+}
+
+    a:focus, a:hover {
+        color: #23527c;
+        text-decoration: underline;
+    }
+
+    a:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+/*设置webkit内核的浏览器下，input获取焦点的时候，placeholder文本的文字透明*/
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input, label, select, option, textarea, button, fieldset, legend {
+    font-size: 12px;
+}
+
+
+
+/*************************************************************************     public style     ***********************************************************************************/
+
+button {
+    /*min-width: 64px;*/
+    min-height: 26px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #fcfcfc;
+}
+
+.table td, .table th {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+}
+
+
+.vertical_top {
+    vertical-align: top;
+}
+
+.vertical_middle {
+    vertical-align: middle;
+}
+
+.vertical_bottom {
+    vertical-align: bottom;
+}
+
+table thead th {
+    background-color: #fafafa;
+}
+
+table > thead > tr > th, table > tbody > tr > td {
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table tbody td {
+    font-size: 12px;
+}
+
+input[readonly]:focus {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    cursor: not-allowed;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.cursor_not {
+    cursor: not-allowed;
+}
+
+.cursor_default {
+    cursor: default;
+}
+
+.position_relative {
+    position: relative;
+}
+
+.display_table {
+    position: relative;
+    display: table;
+}
+
+    .display_table:before, .display_table:after {
+        display: table;
+        content: " ";
+    }
+
+.display_tableCell {
+    display: table-cell;
+}
+
+    .display_tableCell:before, .display_tableCell:after {
+        display: table;
+        content: " ";
+    }
+
+.form_control {
+    width: 100%;
+    height: 34px;
+    padding: 2px 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ddd;
+    line-height: 1;
+    background-color: transparent;
+}
+
+    .form_control:focus {
+        border: 1px solid #7BB1E5;
+        outline: none;
+    }
+
+
+.overflow_auto {
+    overflow: auto;
+}
+
+.overflow_H {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.margin_middle {
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.full_table {
+    width: 100%;
+}
+
+.full_width {
+    width: 100%;
+    /*margin: 0;*/
+    padding: 0 15px;
+}
+
+.half_width {
+    width: 50%;
+}
+
+.clear_both {
+    clear: both;
+}
+
+    .clear_both:before, .clear_both:after {
+        display: table;
+        content: " ";
+    }
+
+.float_none {
+    float: none;
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+
+.no_padding {
+    padding: 0;
+}
+
+.noPadding {
+    padding: 0 !important;
+}
+
+.no_margin {
+    margin: 0;
+}
+
+.marginTop_50 {
+    margin-top: 50px;
+}
+
+.marginTop_20 {
+    margin-top: 20px;
+}
+
+.marginBt_50 {
+    margin-bottom: 50px;
+}
+
+.paddingX_20 {
+    padding: 0 20px;
+}
+
+.paddingX_15 {
+    padding: 0 15px;
+}
+
+.paddingTop_50 {
+    padding-top: 50px;
+}
+
+.paddingBt_50 {
+    padding-bottom: 50px;
+}
+
+.border_bottom1 {
+    border-bottom: 1px solid #ddd;
+}
+
+.font_bold {
+    font-weight: bold;
+}
+
+.text_center {
+    text-align: center !important;
+}
+
+.text_left {
+    text-align: left !important;
+}
+
+.text_right {
+    text-align: right !important;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.line_height26 {
+    line-height: 26px;
+}
+
+.height26 {
+    height: 26px;
+}
+
+.line_height34 {
+    line-height: 34px;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+
+.col-1 {
+    width: 8.33333333%;
+}
+
+.col-2 {
+    width: 16.66666667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33333333%;
+}
+
+.col-5 {
+    width: 41.66666667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33333333%;
+}
+
+.col-8 {
+    width: 66.66666667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33333333%;
+}
+
+.col-11 {
+    width: 91.66666667%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    position: relative;
+    float: left;
+    padding: 0 10px;
+}
+
+[class*="col"].no_padding {
+    padding: 0;
+}
+
+/*************************************************************************     easyui reset     ***********************************************************************************/
+/*************      dialog        ***********/
+.jretc_ui .easyui-dialog {
+    display: none;
+}
+/*************      form        ***********/
+#easyuiForm .form_control {
+    width: 200px;
+}
+
+/*************      datagrid        ***********/
+.jretc_ui .datagrid th, .datagrid td {
+    padding: 0;
+}
+
+.jretc_ui *:not(.tooltip-content .tooltip-arrow-outer) {
+    border-color: #ddd;
+}
+
+
+.datagrid-header td, .datagrid-body td, .datagrid-footer td {
+    border-style: solid;
+}
+.datagrid-body tr:last-child td {
+   // border-bottom-width:0;
+}
+/*header*/
+.jretc_ui .panel-header {
+    padding: 6px;
+    background-color: #fafafa;
+    background: linear-gradient(to bottom,#fefefe 0,#fafafa 100%);
+}
+
+.jretc_ui .panel-title {
+}
+
+.jretc_ui .panel-tool {
+}
+
+/*body*/
+.jretc_ui .panel-body {
+    border-color: #ddd;
+    border-width: 0;
+}
+
+.jretc_ui .panel-body-noheader {
+    border-top-width: 1px;
+}
+
+.jretc_ui .datagrid-view {
+    border: 1px solid #ddd;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.jretc_ui .datagrid-view1 {
+    border-right-width: 1px;
+}
+
+    .jretc_ui .datagrid-view1 .datagrid-body {
+        border-right: 1px solid #ddd;
+    }
+
+
+.jretc_ui .datagrid-view2 {
+    border-right-width: 1px;
+    border-right: 1px solid #ddd;
+}
+
+    .jretc_ui .datagrid-view2 .datagrid-body {
+        border-right: 1px solid #ddd;
+    }
+
+
+.jretc_ui .datagrid-header {
+    border-right-width: 1px;
+}
+
+.jretc_ui .datagrid-body {
+    border-right-width: 1px;
+}
+
+.jretc_ui .datagrid-cell {
+    padding: 6px 4px;
+}
+
+
+.jretc_ui .datagrid-pager {
+    background: #fff;
+}
+
+
+.jretc_ui .datagrid-header td.datagrid-header-over {
+    background: #ddd;
+}
+/*鼠标移入的效果*/
+.jretc_ui .datagrid-row-over {
+    background: #fbfbfb;
+}
+
+/*行被选中的效果*/
+.jretc_ui .datagrid-row-selected {
+    background: #fbfbfb;
+    color: #000000;
+}
+
+/*foot--page-num*/
+.jretc_ui .pagination-page-list, .jretc_ui .pagination .pagination-num {
+    border-color: #ddd;
+}
+
+.jretc_ui .pagination-page-list {
+    margin: 0 6px 0 0;
+    padding: 1px 2px;
+    width: auto;
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.jretc_ui .pagination-btn-separator {
+    float: left;
+    height: 24px;
+    border-width: 0;
+    margin: 3px 1px;
+}
+
+.jretc_ui .pagination .pagination-num {
+    width: 2em;
+    height: auto;
+    margin: 0 2px;
+    padding: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.jretc_ui .pagination-info {
+    float: right;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.datagrid_radio {
+    position: relative;
+    top: 2px;
+    right: 2px;
+    margin-left: 5px;
+}
+
+.datagrid_radio_label {
+    margin-right: 20px;
+}
+/*************      Messager       ***********/
+.jretc_ui .window {
+    padding: 0;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    background: -webkit-linear-gradient(top,#fff 0,#fff 20%);
+    background: -moz-linear-gradient(top,#fff 0,#fff 20%);
+    background: -o-linear-gradient(top,#fff 0,#fff 20%);
+    background: linear-gradient(to bottom,#fff 0,#fff 20%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff,endColorstr=#fff,GradientType=0);
+    box-shadow: 3px 3px 10px rgba(0,0,0,.5);
+    -webkit-box-shadow: 3px 3px 10px rgba(0,0,0,.5);
+    -moz-box-shadow: 3px 3px 10px rgba(0,0,0,.5);
+}
+
+    .jretc_ui .window .window-header {
+        /*background: transparent;*/
+        background: #fafafa;
+        padding: 6px 5px 12px 5px;
+        border-color: #ddd;
+    }
+
+    .jretc_ui .window .window-body {
+        padding-top: 15px;
+        padding-bottom: 0;
+        border-color: #fff;
+    }
+
+    .jretc_ui .window .panel-title {
+        font-family: "微软雅黑";
+        font-size: 16px;
+        font-weight: normal;
+        height: 16px;
+        line-height: 20px;
+    }
+
+
+    .jretc_ui .window .messager-icon {
+        width: 25px;
+        height: 25px;
+        margin: -5px 10px 10px 0;
+        /*font-family: 'Glyphicons Halflings';*/
+        font-size: 20px;
+    }
+
+    .jretc_ui .window .messager-question {
+        /*color: #7B80E6;*/
+        background: url('/Content/Images/MessagerIcon/question.png') no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+    .jretc_ui .window .messager-error {
+        /*color: #1DDB20;*/
+        background: url('/Content/Images/MessagerIcon/delete.png') no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+    .jretc_ui .window .messager-info {
+        background: url('/Content/Images/MessagerIcon/info.png') no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+    .jretc_ui .window .messager-warning {
+        /*color: #fce450;*/
+        background: url('/Content/Images/MessagerIcon/warning.png') no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+.jretc_ui .messager-body .messager-input {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border-color: #ddd;
+}
+
+    .jretc_ui .messager-body .messager-input:focus {
+        border-color: #7BB1E5;
+    }
+
+.jretc_ui .window .dialog-button {
+    background-color: transparent;
+    border-width: 0;
+    border-style: solid;
+    /*border-top: 1px solid #ddd;*/
+}
+
+.jretc_ui .window .messager-button {
+    text-align: right;
+    padding: 5px;
+}
+
+
+    .jretc_ui .window .messager-button .l-btn {
+        color: #fff;
+        width: 50px;
+        outline: none;
+        border: 0;
+    }
+
+        .jretc_ui .window .messager-button .l-btn:last-child {
+            background: #d2b38f;
+        }
+
+            .jretc_ui .window .messager-button .l-btn:last-child:hover {
+                background: #BFA382;
+            }
+
+        .jretc_ui .window .messager-button .l-btn:first-child {
+            background: #ed6d00;
+        }
+
+            .jretc_ui .window .messager-button .l-btn:first-child:hover {
+                background-color: #DA6501;
+            }
+
+
+/*遮罩层*/
+.jretc_ui .window-proxy-mask, .window-mask {
+    background: #000;
+}
+
+.jretc_ui.window-shadow {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+
+/*************      combobox      ********15872255473***/
+
+.jretc_ui .easyui-combobox {
+    border: 0;
+}
+
+.jretc_ui .searching .textbox {
+    /*display: table-cell;*/
+    display: inline-block;
+    height: 26px;
+    border: 1px solid #ddd;
+}
+
+.jretc_ui .searching .textbox-invalid {
+    border-color: #ddd;
+    background-color: #fff;
+}
+
+.jretc_ui .textbox-focused {
+    box-shadow: none;
+    border: 1px solid #7BB1E5;
+    outline: none;
+}
+
+.jretc_ui .textbox a {
+    outline: none;
+}
+
+.jretc_ui .searching .textbox-text {
+    /*min-width: 100%;*/
+    max-width: 100%;
+    cursor: default;
+    text-indent: 10px;
+}
+
+.jretc_ui .textbox-focused input {
+    border: 0;
+}
+
+.jretc_ui .validatebox-invalid {
+    background-color: #fff;
+    border: 1px solid #ed6d00;
+    box-shadow: 0 0 8px rgba(239,118,44,.4);
+    -webkit-box-shadow: 0 0 8px rgba(239,118,44,.4);
+    -moz-box-shadow: 0 0 8px rgba(239,118,44,.4);
+}
+
+.jretc_ui .combo-arrow {
+    background: url('/Content/Images/Icon/downArrow.png') no-repeat center center;
+}
+
+.jretc_ui .combobox-item-selected {
+    background-color: #ddd;
+    color: #000;
+}
+
+.jretc_ui .combobox-item-hover {
+    background-color: #1E90FF;
+    color: #fff;
+}
+
+/*************      datebox       ***********/
+
+.datebox .combo-arrow {
+    background-image: url('/Content/Easyui/images/datebox_arrow.png');
+    background-position: center center;
+}
+
+.jretc_ui .combo-panel {
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: #ddd;
+}
+
+.jretc_ui .calendar {
+    padding: 5px;
+    border-radius: 4px;
+    border-color: #ddd;
+}
+
+.jretc_ui .calendar-header {
+    height: 36px;
+    padding: 6px 0;
+    background: #fcfcfc;
+}
+
+.jretc_ui .calendar-title span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.calendar-body th, .calendar-body td {
+    padding: 5px 0;
+    font-family: "宋体";
+    text-align: center;
+}
+
+.jretc_ui .calendar-body th {
+    background: #fcfcfc;
+}
+
+
+
+.jretc_ui .calendar-nav-hover {
+    background-color: #fafafa;
+}
+
+.jretc_ui .calendar-selected {
+    background-color: #ed6d00;
+    color: #fff;
+    border: 0;
+}
+
+.jretc_ui .datebox-button {
+    padding: 4px 0;
+    background-color: #fcfcfc;
+}
+
+    .jretc_ui .datebox-button a {
+        font-weight: bold;
+        opacity: 0.8;
+    }
+/*月份*/
+.jretc_ui .calendar-menu-year-inner {
+    display: none; /*隐藏左右选择年份的功能*/
+}
+
+.jretc_ui .calendar-menu-month-inner {
+    margin-top: 10px;
+}
+
+.jretc_ui .calendar-mtable td {
+    font-weight: normal;
+}
+
+
+/*************      form       ***********/
+.jretc_ui .easyui_dialog {
+    /*margin-top:20px;*/
+}
+
+.jretc_ui .window .button_group {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.form_row {
+    width: 300px;
+    margin: 0 auto;
+}
+
+    .form_row:first-child {
+        margin-top: 20px;
+    }
+
+    .form_row label {
+        display: inline-block;
+        width: 72px;
+    }
+
+.jretc_ui .submit {
+    margin: 20px 0 30px 0;
+    color: #fff;
+    background: #ed6d00;
+}
+/*************      treegrid       ***********/
+.bootstrap_tree * {
+    border-color: #ddd;
+}
+
+.bootstrap_tree .panel {
+    border-right: 1px solid #ddd;
+}
+
+
+/*************************************************************************     page style     ***********************************************************************************/
+
+/*searching*/
+.searching {
+    margin-top: 30px;
+    font-family: "宋体";
+}
+
+.se_condition {
+    margin-bottom: 5px;
+}
+
+.searching .form_control {
+    height: 26px;
+    margin: 0;
+}
+
+.searching label, .searching input, .searching select {
+    display: table-cell;
+}
+
+.searching label {
+    width: 75px;
+    padding-right: 14px;
+    font-size: 14px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.searching_btn {
+    margin-top: 10px;
+    padding: 5px 0 0 0;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+.search_btn, .reset_btn, .add_btn, .modify_btn {
+    opacity: .8;
+    min-width: 60px;
+}
+
+.search_btn {
+    background: #ed6d00 url(/Content/Images/Icon/search-white.png) center center no-repeat;
+}
+
+.reset_btn {
+    background: #ed6d00 url(/Content/Images/Icon/clear-white.png) center center no-repeat;
+}
+
+.add_btn {
+    background: #ed6d00 url(/Content/Images/Icon/add-white.png) center center no-repeat;
+}
+
+.modify_btn {
+}
+
+    .search_btn:hover, .reset_btn:hover, .add_btn:hover, .modify_btn:hover {
+        opacity: 1;
+    }
+
+
+
+/*table data*/
+.data_wrapper {
+    margin-top: 20px;
+}
+
+.table_icon {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+    .table_icon img {
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+        .table_icon img[src*="Gray"] {
+            cursor: not-allowed;
+        }
+
+.table caption {
+    padding: 6px 12px 6px 0;
+    font-family: "宋体";
+    font-size: 16px;
+    text-align: left;
+}
+
+.data_wrapper input[type="text"] {
+    text-align: center;
+}
+
+
+/************************     OrgManagement Page      *******************************/
+.address select {
+    width: 150px;
+    float: left;
+}
+
+/************************     LogManagement Page      ******************************/
+.width84 {
+    width: 84px !important;
+}
+
+.width96 {
+    width: 96px !important;
+}
+
+.width150 {
+    width: 150px !important;
+}
+
+/************************     LogAddManagement Page      ******************************/
+.floatNone {
+    float: none !important;
+}
+
+.height120 {
+    height: 120px;
+}
+
+.textareaPadding {
+    padding: 6px 12px;
+}
+
+/************************     LogManage Page      ******************************/
+.margin_X10 {
+    margin: 0 10px;
+}
+
+/*.modify_btn {
+    opacity: .8;
+    min-width: 60px;
+    max-height:26px;
+    background-color: #ed6d00;
+    color: white;
+    line-height: 14px;
+    position: relative;
+    top: -2px;
+ 
+}
+
+    .add_btn:hover, .modify_btn:hover {
+        opacity: 1;
+    }*/
+
+/************************     SetPermission Page      ******************************/
+#setPermission input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+}
+
+.marginTop_30 {
+    margin-top: 30px;
+}
+
+#setPermission td {
+    padding: 10px !important;
+}
+
+/************************     UserList Page      ******************************/
+#setMacBox {
+    padding-top: 0;
+}
+
+    #setMacBox article {
+        height: 280px;
+        width: 700px;
+        padding-top: 0;
+        display: none;
+    }
+
+    #setMacBox hgroup {
+        background-color: #ccc;
+        height: 40px;
+    }
+
+        #setMacBox hgroup h5 {
+            display: inline-block;
+            width: 50%;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+        }
+
+.h5Active {
+    background-color: #f1f1f1;
+}
+
+.articleActive {
+    display: block !important;
+}

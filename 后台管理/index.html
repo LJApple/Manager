@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrom=1">
+    <meta name="renderer" content="webkit" />
+    <title>test</title>
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/public.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/html5shiv.min.js"></script>
+        <script src="~/Scripts/respond.min.js"></script>
+    <![endif]-->
+    <!--<script src="~/Scripts/timeTable/timetable.js"></script>-->
+</head>
+<body>
+    <header>
+        <img class="index_logo" src="~/Content/Images/login_logo.png" />
+        <hgroup class="index_title">
+            <h1 class="indexTopTitle">TEST</h1>
+            <!--<h3>ENROLLMENT MANAGEMENT SYSTEM</h3>-->
+        </hgroup>
+        <article class="user_info_modul">
+         <!--   @* 用户信息 *@-->
+            <article>
+                <span id="UserName">xx</span>,
+                <span class="time">下午好</span>
+            </article>
+            <!--@* 时间 *@
+            @*<div id="timetable" class="time_info"></div>*@
+            @* 校区/消息/退出 *@-->
+            <article>
+                <a class="person_info" title="个人信息">个人信息</a>
+            </article>
+            <article class="indexHeadRightAction">
+                <a id="lang" class="change_lang" title="" lang="CH">切换到英文版</a>
+                <a class="change_pwd" title="修改密码">修改密码</a>
+                <a class="logout" title="注销">
+                    <img src="~/Content/Images/Icon/closeBtn.png" />
+                </a>
+            </article>
+        </article>
+    </header>
+   <!-- @*left aside*@-->
+    <aside class="index_aside" id="load_menus">
+        <menu id="menu">
+            <ul class="one_level_title">
+                <li class="">
+                    <img src="~/Content/Images/Icon/submitAudit.png" />
+                    <img src="~/Content/Images/Icon/submitAuditGray.png" class="active_none" />
+                    <h4>报名</h4>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <ul class="second_level_title">
+                        <li><a ref="/SignUp/SignUp" class="publick" target="_blank"><h5>报名交费</h5></a></li>
+                        <li><a ref="/SignUp/TransferOutSch" class="publick" target="_blank"><h5>转校转出</h5></a></li>
+                        <li><a ref="/SignUp/SchoolAccept" class="publick" target="_blank"><h5>转校接收</h5></a></li>
+                        <li><a ref="/SignUp/TransferSchChange" class="publick" target="_blank"><h5>转校变更</h5></a></li>
+                        <li><a ref="/SignUp/returnMoney/" class=" publick" target="_blank"><h5>退费</h5></a></li>
+                        <li><a ref="/JrCreditUserAcct/JrCreditUserAcct" class="publick" target="_blank"><h5>预收费</h5></a></li>
+                        <li><a ref="/Discount/DiscountView" class=" publick" target="_blank"><h5>优惠设置</h5></a></li>
+                        <li><a ref="/SignUp/SignUpInvalid" class="publick" target="_blank"><h5>报名作废</h5></a></li>
+                        <li><a ref="/SignUp/returnMoneyAudit" class="publick" target="_blank"><h5>退费作废</h5></a></li>
+                        <li><a ref="/SignUp/BatchImportSignData" class="publick" target="_blank"><h5>批量导入报名数据</h5></a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <img src="~/Content/Images/Icon/activityPerfonnel.png" />
+                    <img src="~/Content/Images/Icon/activityPerfonnelGray.png" class="active_none" />
+                 <!--   @*<img src="~/Content/Images/Icon/login_pic_password.png" class="active" />*@-->
+                    <h4>报表</h4>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <ul class="second_level_title">
+                        <li><a ref="/Reports/EnrollMap" class="publick" target="_blank"><h5>销售额排名</h5></a></li>
+                        <li><a ref="http://www.baidu.com" class="publick" target="_blank"><h5>转化率统计</h5></a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <img src="~/Content/Images/Icon/activityPerfonnel.png" />
+                    <img src="~/Content/Images/Icon/activityPerfonnelGray.png" class="active_none" />
+                  <!--  @*<img src="~/Content/Images/Icon/login_pic_password.png" class="active" />*@-->
+                    <h4>招生报表</h4>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <ul class="second_level_title">
+                        <li><a ref="/EnrollmentStatistics/EnrollmentStatisticsView" class="publick" target="_blank"><h5>招生人数统计</h5></a></li>
+                        <li><a ref="~/ContinueToRateStatistics/ContinueToRateStatisticsList" class="publick" target="_blank"><h5>续报率统计（人数）</h5></a></li>
+                        <li><a ref="~/ContinueToRateStatistics/ContinueStatistics" class="publick" target="_blank"><h5>续报率统计（金额）</h5></a></li>
+                        <li><a ref="~/ContinueSignUpStudent/NotToContinueSignUpStudentList" class="publick" target="_blank"><h5>未续读学生名单</h5></a></li>
+                        <li><a ref="~/ContinueSignUpStudent/ContinueSignUpStudentProba" class="publick" target="_blank"><h5>续读率统计</h5></a></li>
+                        <li><a ref="~/DataAnalyse/DataAnalyseView" class="publick" target="_blank"><h5>数据分析</h5></a></li>
+                        <li><a ref="~/EnrlogNIntroStu/EnrlogNIntroStuView" class="publick" target="_blank"><h5>转介绍排名</h5></a></li>
+                        <li><a ref="~/EnrollDynamicState/EnrollDynamicState" class="publick" target="_blank"><h5>招生动态查询</h5></a></li>
+                        <li><a ref="~/ReturnsMoneyCount/ReturnsMoneyCountView" class="publick" target="_blank"><h5>退费排名</h5></a></li>
+                        <li><a ref="~/TeacherPerformanceData/TeacherPerformanceData" class="publick" target="_blank"><h5>老师业绩统计</h5></a></li>
+                        <li><a ref="~/TeacherPerformanceData/TeacherPerformance" class="publick" target="_blank"><h5>老师业绩统计(新)</h5></a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <img src="~/Content/Images/Icon/submitAudit.png" />
+                    <img src="~/Content/Images/Icon/submitAuditGray.png" class="active_none" />
+                <!--    @*<a href="http://www.baidu.com" title="学生管理" target="_blank">*@-->
+                    <h4>学生管理</h4>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <ul class="second_level_title">
+                        <li><a ref="/StudentManage/StudentInfo" class=" publick" target="_blank"><h5>学生资料</h5></a></li>
+                        <li><a ref="/StudentManage/StudentRoster" class="publick" target="_blank"><h5>学员花名册</h5></a></li>
+                        <li><a ref="/StudentManage/StudentNameManage" class="publick" target="_blank"><h5>重名学生合并</h5></a></li>
+                        <li><a ref="/NoteManager/NoteManager" class="publick" target="_blank"><h5>短信管理</h5></a></li>
+                        <li><a ref="/StudentManage/BatchImportStudent" class="publick" target="_blank"><h5>批量导入学生</h5></a></li>
+                    </ul>
+                </li>
+
+            <li class="">
+                <img src="~/Content/Images/Icon/activityPerfonnel.png"/>
+                <img src="~/Content/Images/Icon/activityPerfonnelGray.png" class="active_none"/>
+            <!--    @*<img src="~/Content/Images/Icon/login_pic_password.png" class="active" />*@-->
+                <h4>班级管理</h4>
+                <span class="glyphicon glyphicon-plus"></span>
+                <ul class="second_level_title">
+                    <li><a ref="/CourseManage/CourseMaterialList" class="publick" target="_blank"><h5>班级资料</h5></a></li>
+                    <li><a ref="/CourseManage/BatchCreateClaList" class="publick" target="_blank"><h5>批量建班</h5></a></li>
+                    <li><a ref="/ClassTime/ClassTimeManage" class="publick" target="_blank"><h5>上课时间管理</h5></a></li>
+                    <li><a ref="/ClassRoom/ClassRoomManage" class="publick" target="_blank"><h5>上课教室管理</h5></a></li>
+                    <li><a ref="/CourseManage/FeeScaleAuthority" class="publick" target="_blank"><h5>收费标准管理</h5></a></li>
+                    <li><a ref="/MajorGroup/MajorGroup" class="publick" target="_blank"><h5>专业组管理</h5></a></li>
+                    <li><a ref="/ParClassPara1/ParClassPara1" class="publick" target="_blank"><h5>专业管理</h5></a></li>
+                </ul>
+            </li>
+                <li class="">
+                    <img src="~/Content/Images/Icon/activityPerfonnel.png" />
+                    <img src="~/Content/Images/Icon/activityPerfonnelGray.png" class="active_none" />
+                    <h4>排课管理</h4>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <ul class="second_level_title">
+                        <li><a ref="/ImportClass/UpholdNewExcelViewStu" class="publick" target="_blank"><h5>学生/班级排课管理</h5></a></li>
+                        <li><a ref="/CourseArrangeManage/EnrolmentArrange" class="publick" target="_blank"><h5>报名排课</h5></a></li>
+                        <li><a ref="/CourseArrangeManage/PersonAdjustment" class="publick" target="_blank"><h5>转班/调课</h5></a></li>
+                        <li><a ref="/CourseArrangeManage/ClassAdjustment" class="publick" target="_blank"><h5>课程调整</h5></a></li>
+                        <li><a ref="/CourseArrangeManage/Makeup" class="publick" target="_blank"><h5>补课</h5></a></li>
+                        <li><a ref="/MakeupLessons/makeupLesson" class="publick" target="_blank"><h5>补课（new）</h5></a></li>
+                        <li><a ref="/Retroactive/Retroactive" class="publick" target="_blank"><h5>补签</h5></a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <img src="~/Content/Images/Icon/activityPerfonnel.png" />
+                    <img src="~/Content/Images/Icon/activityPerfonnelGray.png" class="active_none" />
+                  <!--  @*<img src="~/Content/Images/Icon/login_pic_password.png" class="active" />*@-->
+                    <h4>财务管理</h4>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <ul class="second_level_title">
+                        <li><a ref="/BillMake/BillMakeView" class="publick" target="_blank"><h5>票据补打</h5></a></li>
+                        <li><a ref="/FinanceManage/ChargeTransfer" class="publick" target="_blank"><h5>收费交接(新)</h5></a></li>
+                        <li><a ref="/BillMake/ChargeCarryoverView" class="publick" target="_blank"><h5>收费交接明细查询</h5></a></li>
+                        <li><a ref="/FinanceManage/ChargeTransferList" class="publick" target="_blank"><h5>收费交接查询</h5></a></li>
+                        <li><a ref="/FinanceManage/ShowChargeNonHandoverAlarm" class="publick" target="_blank"><h5>收费未交接报警</h5></a></li>
+                        <li><a ref="/FinanceManage/MoneyDayReport" class="publick" target="_blank"><h5>收银日报</h5></a></li>
+                        <li><a ref="/FinanceManage/CollectDetails" class="publick" target="_blank"><h5>收银明细</h5></a></li>
+                        <li><a ref="/FinanceManage/RegistrationDetails" class="publick" target="_blank"><h5>报名明细</h5></a></li>
+                        <li><a ref="/FinanceManage/TransferSchDetails" class="publick" target="_blank"><h5>转校明细</h5></a></li>
+                        <li><a ref="/FinanceManage/RefundInfo" class="publick" target="_blank"><h5>退费明细</h5></a></li>
+                        <li><a ref="/FinanceManage/ClassConsumptionDetails" class="publick" target="_blank"><h5>课耗明细</h5></a></li>
+                        <li><a ref="/Reports/MonthlyIncome" class="publick" target="_blank"><h5>月报明细</h5></a></li>
+                        <li><a ref="" class="publick" target="_blank"><h5>校区收费统计表</h5></a></li>
+                        <li><a ref="/FinanceManage/SemesterInfo" class="publick" target="_blank"><h5>学期收费统计</h5></a></li>
+                        <li><a ref="/JrCreditUserAcctReport/JrCreditUserAcctReportView" class="publick" target="_blank"><h5>预存款充值明细</h5></a></li>
+                        <li><a ref="/CourseArrangeManage/SwitchClassRecord" class="publick" target="_blank"><h5>转班/调课明细</h5></a></li>
+                        <li><a ref="/FinanceManage/DayBusiness" class="publick" target="_blank"><h5>日营业报表</h5></a></li>
+                        <li><a ref="/FinanceManage/MonthBusiness" class="publick" target="_blank"><h5>月营业报表</h5></a></li>
+                        <li><a ref="/FinanceManage/MonthBusinessDetail" class="publick" target="_blank"><h5>月营业报表明细</h5></a></li>
+                        <li><a ref="/FinanceManage/BalanceStatistics" class="publick" target="_blank"><h5>余额统计</h5></a></li>
+                        <li><a ref="/FinanceManage/RevenueSettlementSum" class="publick" target="_blank"><h5>收入结算汇总表</h5></a></li>
+                        <li><a ref="/FinanceManage/RevenueSettlementSumDetail" class="publick" target="_blank"><h5>收入结算明细表</h5></a></li>
+                        <li><a ref="/FinanceManage/BusinessDetailReport" class="publick" target="_blank"><h5>营业明细表</h5></a></li>
+                        <li><a ref="/FinanceManage/PrePaymentAmtReport" class="publick" target="_blank"><h5>预收费统计表</h5></a></li>
+                        <li><a ref="/FinanceManage/NoClassSumReport" class="publick" target="_blank"><h5>未上课次汇总</h5></a></li>
+                        <li><a ref="/FinanceManage/TeacherSalaryReport" class="publick" target="_blank"><h5>教师提成统计</h5></a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <img src="~/Content/Images/Icon/activityPerfonnel.png" />
+                    <img src="~/Content/Images/Icon/activityPerfonnelGray.png" class="active_none" />
+                  <!--  @*<img src="~/Content/Images/Icon/login_pic_password.png" class="active" />*@-->
+                    <h4>考勤管理</h4>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <ul class="second_level_title">
+                        <li><a ref="/AttendCheck/AttendCheck" class="publick" target="_blank"><h5>考勤核对</h5></a></li>
+                        <li><a ref="/AttendanceStatistics/AttendanceStatistics" class="publick" target="_blank"><h5>考勤统计</h5></a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <img src="~/Content/Images/Icon/activityPerfonnel.png" />
+                    <img src="~/Content/Images/Icon/activityPerfonnelGray.png" class="active_none" />
+                    <h4>系统设置</h4>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <ul class="second_level_title">
+                        <li><a ref="/FixClassStartEndDate/FixClassStartEndDate" class="publick" target="_blank"><h5>学期管理</h5></a></li>
+                        <li><a ref="/ClassPackage/index" class="publick" target="_blank"><h5>课包管理</h5></a></li>
+                        <li><a ref="/School/School" class="publick" target="_blank"><h5>校区管理</h5></a></li>
+                        <li><a ref="/ImportClass/StudentSchedule" class="publick" target="_blank"><h5>自动排课按校区</h5></a></li>
+                    </ul>
+            </ul>
+        </menu>
+    </aside>
+ <!--   @* content *@-->
+    <article class="index_content">
+        <div class="leftmenuHide">
+            <a class="leftClick" id="splitIconId">
+                <span class=""></span>
+            </a>
+        </div>
+        <nav class="">
+            <a class="scrollA"></a>
+           
+            <ul>
+              
+            </ul>
+            <a class="scrollB">></a>
+        </nav>
+        <article class="incontent_con">
+            <!--@*<iframe src="" id="iframe_1"></iframe>*@
+            @*<iframe src="" id="iframe_2"></iframe>*@-->
+        </article>
+       
+    </article>
+    <script src="assets/easyui/jquery.min.js"></script>
+    <script src="Language/XML.js"></script>
+    <script src="Language/CH.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        jQuery(function ($) {
+            $.indexPage();
+        })
+    </script>
+</body>
+</html>

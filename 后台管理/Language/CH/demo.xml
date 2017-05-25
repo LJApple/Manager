@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root name="Demo页面">
+  
+  <demo name="页面内容">
+    <UserName>用户名：</UserName>
+    <Email>邮箱：</Email>
+    <Address>地址：</Address>
+    <Inquiry>询问</Inquiry>
+    <Dialog>我的 dialog</Dialog>
+    <Ueditor>编辑器</Ueditor>
+    <judge>判断</judge>
+  </demo>
+  <signUp>
+    <spAmount>1000</spAmount>
+    <spAmountTxt>特殊优惠(1~1,000元)</spAmountTxt>
+  </signUp>
+  <demoContent name="Demo Content">
+    <minLength>Please enter a character with at least {0} of length</minLength>
+  </demoContent>
+
+</root>

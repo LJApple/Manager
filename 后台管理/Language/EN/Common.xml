@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root name="公共字段">
+  <SystemtName>用户管理系统</SystemtName>
+  <Search>搜索</Search>
+  <PleaseSelectCampus>请选择校区</PleaseSelectCampus>
+  <PleaseSelectAMajor>请选择专业</PleaseSelectAMajor>
+  <PleaseChooseTerm>请选择学期</PleaseChooseTerm>
+  <PleaseSelectClass>请选择班级</PleaseSelectClass>
+  <NoRecord>无记录</NoRecord>
+  <TotalRecords>总记录数</TotalRecords>
+  <PerPage>每页显示</PerPage>
+  <PageNumber>页码</PageNumber>
+  <FirstPage>第一页</FirstPage>
+  <PreviousPage>上一页</PreviousPage>
+  <NextPage>下一页</NextPage>
+  <EndPage>尾页</EndPage>
+  <SwitchVersion>切换到英文版</SwitchVersion>
+  <ModifyPassword>修改密码</ModifyPassword>
+  <LogOff>注销</LogOff>
+  <PersonalInformation>个人信息</PersonalInformation>
+  <Create>创建</Create>
+  <Delete>删除</Delete>
+  <Edit>编辑</Edit>
+  <Select>选择</Select>
+  <Query>查询</Query>
+  <Reset>重置</Reset>
+  <Reload>刷新</Reload>
+  <Return>返回</Return>
+  <Disable>不可用</Disable>
+  <Save>保存</Save>
+  <Close>关闭</Close>
+  <CloseAll>关闭全部</CloseAll>
+  <Confirm>确认</Confirm>
+  <Cancel>取消</Cancel>
+  <Add>新增</Add>
+  <All>全部</All>
+  <Campus>校区</Campus>-
+  <Semester>学期</Semester>
+  <Professional>专业</Professional>
+  <Class>班级</Class>
+  <PersonalInfo>个人信息</PersonalInfo>
+  <OldPassword>旧密码：</OldPassword>
+  <NewPassword>新密码：</NewPassword>
+  <ConfirmNewPassword>确认新密码：</ConfirmNewPassword>
+  
+  <MessageType name="信息弹窗类型">
+    <Tip>提示</Tip>
+    <Warning>警告</Warning>
+    <Error>错误</Error>
+    <Information>信息</Information>
+    <Success>成功</Success>
+  </MessageType>
+  <MessageContent name="信息弹窗内容">
+    <ConfirmDel>确认删除？</ConfirmDel>
+    <PlaseChooseToOperatingRecords>请选择要操作的记录</PlaseChooseToOperatingRecords>
+    <AreYouLogOff>您确定要注销系统吗?</AreYouLogOff>
+    <CanNotOperateTheRecord>不能操作该记录</CanNotOperateTheRecord>
+    <YouWantToDeleteTheSelectedRecords>您确定要删除所选记录吗？</YouWantToDeleteTheSelectedRecords>
+    <DeleteText>删除后将无法恢复！确定要执行该操作吗？</DeleteText>
+    <SwitchingSkin>切换主题,系统将重新加载?</SwitchingSkin>
+    <UserTimeOver>用户登录超时,请重新登录</UserTimeOver>
+    <YouCanOnlyOperateARecord>一次只能操作一条记录!</YouCanOnlyOperateARecord>
+    <YouMustChangeOnlyOperateARecord>请选择一条数据!</YouMustChangeOnlyOperateARecord>
+    <Welcome>欢迎</Welcome>
+    <Channel>导入</Channel>
+    <YouMustChangeAFile>请选中要导入的文件！</YouMustChangeAFile>
+    <Export>导出</Export>
+    <UpLoad>上传</UpLoad>
+    <Details>详细</Details>
+    <Loading>加载中</Loading>
+    <LogOff>安全退出</LogOff><!--与上面Line18重复-->
+    <NoAnyChanges>没做任务修改</NoAnyChanges>
+    <Operate>操作</Operate>
+    <Reset>重置</Reset>
+    <Fail>操作失败</Fail>
+  </MessageContent>
+
+  <ValidatorMessage name="验证提示">
+    <MinLength>请输入至少长度为{0}的字符</MinLength>
+    <English>请输入英文字符</English>
+  </ValidatorMessage>
+</root>

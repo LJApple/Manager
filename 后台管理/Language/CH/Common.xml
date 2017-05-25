@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root name="Public Field">
+  <SystemtName>User manage system</SystemtName>
+  <Search>Search</Search>
+  <PleaseSelectCampus>Please Select Campus</PleaseSelectCampus>
+  <PleaseSelectAMajor>Please Select A Major</PleaseSelectAMajor>
+  <PleaseChooseTerm>Please Choose Term</PleaseChooseTerm>
+  <PleaseSelectClass>Please Select Class</PleaseSelectClass>
+  <NoRecord>No Record</NoRecord>
+  <TotalRecords>Total Records</TotalRecords>
+  <PerPage>Per Page</PerPage>
+  <PageNumber>Page Number</PageNumber>
+  <FirstPage>First Page</FirstPage>
+  <PreviousPage>Previous Page</PreviousPage>
+  <NextPage>Next Page</NextPage>
+  <EndPage>End Page</EndPage>
+  <SwitchVersion>Switch To Chinese Version</SwitchVersion>
+  <ModifyPassword>Modify Password</ModifyPassword>
+  <LogOff>Log Off</LogOff>
+  <PersonalInformation>Personal Information</PersonalInformation>
+  <Create>Create</Create>
+  <Delete>Delete</Delete>
+  <Edit>Edit</Edit>
+  <Select>Select</Select>
+  <Query>Query</Query>
+  <Reset>Reset</Reset>
+  <Reload>Reload</Reload>
+  <Return>Return</Return>
+  <Disable>Disable</Disable>
+  <Save>Save</Save>
+  <Close>Close</Close>
+  <CloseAll>Close All</CloseAll>
+  <Confirm>Confirm</Confirm>
+  <Cancel>Cancel</Cancel>
+  <Add>Add</Add>
+  <All>All</All>
+  <Campus>Campus</Campus>
+  <Semester>Semester</Semester>
+  <Professional>Professional</Professional>
+  <Class>Class</Class>
+  <PersonalInfo>PersonalInfo</PersonalInfo>
+  <OldPassword>Old password:</OldPassword>
+  <NewPassword>New password:</NewPassword>
+  <ConfirmNewPassword>Confirm new password:</ConfirmNewPassword>
+
+  <MessageType name="Information Window Type">
+    <Tip>Tip</Tip>
+    <Warning>Warning</Warning>
+    <Error>Error</Error>
+    <Information>Information</Information>
+    <Success>Success</Success>
+  </MessageType>
+
+  <MessageContent name="Information Window Content">
+    <ConfirmDel>Are you sure delete?</ConfirmDel>
+    <PlaseChooseToOperatingRecords>Plase Choose To Operating Records</PlaseChooseToOperatingRecords>
+    <AreYouLogOff>Are You LogOff The System?</AreYouLogOff>
+    <CanNotOperateTheRecord>Can Not Operate The Record</CanNotOperateTheRecord>
+    <YouWantToDeleteTheSelectedRecords>You Want To Delete The Selected Records?</YouWantToDeleteTheSelectedRecords>
+    <DeleteText>Delete will not be able to restore! Are you sure you want to perform this operation?</DeleteText>
+    <SwitchingSkin>Switching Skin,System Reload?</SwitchingSkin>
+    <UserTimeOver>User Time Over,Please Log In Again!</UserTimeOver>
+    <YouCanOnlyOperateARecord>You Can Only Operate A Record!</YouCanOnlyOperateARecord>
+    <YouMustChangeOnlyOperateARecord>You Must Change Only Operate A Record!</YouMustChangeOnlyOperateARecord>
+    <Welcome>Welcome</Welcome>
+    <Channel>Channel</Channel>
+    <YouMustChangeAFile>You Must Change A File!</YouMustChangeAFile>
+    <Export>Export</Export>
+    <UpLoad>UpLoad</UpLoad>
+    <Details>Details</Details>
+    <Loading>Loading</Loading>
+    <LogOff>LogOff</LogOff>
+    <NoAnyChanges>No Any Changes</NoAnyChanges>
+    <Operate>Operate</Operate>
+    <Reset>Reset</Reset>
+    <Fail>Fail</Fail>
+  </MessageContent>
+  
+  <ValidatorMessage name="Validator tip">
+    <MinLength>请输入至少长度为{0}的字符</MinLength>
+    <English>请输入英文字符</English>
+  </ValidatorMessage>
+</root>

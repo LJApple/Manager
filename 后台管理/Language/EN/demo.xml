@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root name="Demo Page">
+  <demo name="Page Content">
+    <UserName>UserName:</UserName>
+    <Email>Email:</Email>
+    <Address>Address:</Address>
+    <Inquiry>Inquiry</Inquiry>
+    <Dialog>My dialog</Dialog>
+    <Ueditor>Ueditor</Ueditor>
+    <judge>Judge</judge>
+  </demo>
+
+  <demoContent name="Demo Content">
+    <minLength>Please enter at least {0} characters.</minLength>
+  </demoContent>
+</root>
